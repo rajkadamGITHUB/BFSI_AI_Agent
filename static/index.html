@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>BFSI AI Assistant</title>
+
+    <!-- IMPORTANT: CSS -->
+    <link
+        rel="stylesheet"
+        href="/static/style.css?v=10"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🏦
+            </div>
+
+            <div class="brand-text">
+                <h2>BFSI AI</h2>
+                <span>Banking Assistant</span>
+            </div>
+
+        </div>
+
+
+        <button
+            class="new-chat"
+            onclick="newChat()"
+        >
+            <span>＋</span>
+            New Chat
+        </button>
+
+
+        <div class="menu-title">
+            BANKING SERVICES
+        </div>
+
+
+        <button
+            class="category active"
+            onclick="filterQuestions('all', this)"
+        >
+            <span>✨</span>
+            All Questions
+        </button>
+
+
+        <button
+            class="category"
+            onclick="filterQuestions('loan', this)"
+        >
+            <span>💰</span>
+            Loans
+        </button>
+
+
+        <button
+            class="category"
+            onclick="filterQuestions('account', this)"
+        >
+            <span>🏦</span>
+            Account
+        </button>
+
+
+        <button
+            class="category"
+            onclick="filterQuestions('card', this)"
+        >
+            <span>💳</span>
+            Cards
+        </button>
+
+        <button class="category" onclick="filterQuestions('credit', this)"><span>◈</span> Credit</button>
+        <button class="category" onclick="filterQuestions('deposits', this)"><span>▤</span> Deposits</button>
+        <button class="category" onclick="filterQuestions('payments', this)"><span>↔</span> Payments</button>
+        <button class="category" onclick="filterQuestions('digital_banking', this)"><span>▱</span> Digital Banking</button>
+        <button class="category" onclick="filterQuestions('security', this)"><span>✓</span> Security</button>
+        <button class="category" onclick="filterQuestions('insurance', this)"><span>+</span> Insurance</button>
+        <button class="category" onclick="filterQuestions('investment', this)"><span>↗</span> Investing</button>
+
+
+        <button
+            class="category"
+            onclick="filterQuestions('support', this)"
+        >
+            <span>🎧</span>
+            Customer Support
+        </button>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="secure-box">
+
+                <div class="secure-icon">
+                    🔒
+                </div>
+
+                <div>
+                    <strong>Secure Banking</strong>
+
+                    <small>
+                        Your information is protected
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div>
+
+                <h1>
+                    BFSI AI Assistant
+                </h1>
+
+                <div class="online">
+                    <span></span>
+                    Online
+                </div>
+
+            </div>
+
+
+            <button
+                class="refresh-button"
+                onclick="newChat()"
+                title="New Chat"
+            >
+                ↻
+            </button>
+
+        </header>
+
+
+        <!-- ================= CHAT ================= -->
+
+        <section
+            id="messages"
+            class="messages"
+        >
+
+            <div
+                id="welcome"
+                class="welcome"
+            >
+
+                <div class="robot">
+                    🤖
+                </div>
+
+
+                <h2>
+                    How can I help you today?
+                </h2>
+
+
+                <p>
+                    Select a banking question below
+                    to get started.
+                </p>
+
+
+                <div class="features">
+
+                    <div>
+                        🔐
+                        <span>Secure</span>
+                    </div>
+
+                    <div>
+                        ⚡
+                        <span>Fast</span>
+                    </div>
+
+                    <div>
+                        🏦
+                        <span>BFSI Focused</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUESTIONS ================= -->
+
+        <section class="questions-panel">
+
+            <div class="questions-heading">
+
+                <div>
+
+                    <h3>
+                        Choose a question
+                    </h3>
+
+                    <p>
+                        Select from the available
+                        banking services
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="questionList"
+                class="question-grid"
+            >
+
+                <div class="loading">
+                    Loading banking questions...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <span>
+                🔒 Demonstration environment
+            </span>
+
+            <span>
+                BFSI AI Service Agent • v1.0
+            </span>
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="/static/app.js?v=10"></script>
+
+</body>
+
+</html>
